@@ -70,18 +70,18 @@ function opencard(user) {
     
     GameLog.appendChild(num)
     if (card == 53) {
-        if (turn < 4) {
+        if (turn < 3) {
             alert('まだ試合を終えるには早すぎる')
             num.remove()
         } else {
             alert(user+' lose!!!!!!!!!!!!!!!!!!!!!!')
         }
-        }
-        for (var i = 0; i < randoms.length; i++){
-            if (randoms[i] == card) {
-                num.remove()
-                turn = turn-1
-            } 
+    }
+    for (var i = 0; i < randoms.length; i++){
+        if (randoms[i] == card) {
+            num.remove()
+            turn = turn-1
+        } 
     }
     randoms.push(card)
     turn = turn + 1
